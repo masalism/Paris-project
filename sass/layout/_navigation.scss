@@ -1,0 +1,10 @@
+.nav {
+    &__list {
+        font-size: 1.6rem;
+    }
+    &__item {
+        margin-right: 3rem;
+        text-decoration: none;
+        color: $color-white;
+    }
+}
