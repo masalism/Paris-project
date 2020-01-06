@@ -7,6 +7,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @include respond(md) {
+        height: 80vh;
+    }
 
     &__flex {
         width: 100%;
@@ -14,12 +17,20 @@
         justify-content: space-between;
         align-items: center;
         padding-top: 5rem;
+        @include respond(lg) {
+            padding-top: 3rem;
+            flex-direction: column;
+        }
     }
 
     &__top {
         display: flex;
         justify-content: space-around;
         align-items: center;
+        @include respond(lg) {
+            flex-direction: column;
+            margin-bottom: 2rem;
+        }
     }
 
     &__banner {
@@ -28,6 +39,11 @@
         font-size: 2.4rem;
         line-height: 2.6rem;
         padding-right: 3rem;
+        @include respond(lg) {
+            margin-bottom: 2rem;
+            padding-right: 0;
+            font-size: 3rem;
+        }
     }
 
     &__center {
@@ -43,18 +59,34 @@
             font-weight: 400;
             letter-spacing: 0.75px;
             color: $color-white;
+            @include respond(lg) {
+                font-size: 2.5rem;
+                margin-top: 4rem;
+            }
         }
     }
 
     &__bottom {
-        flex-wrap: wrap;
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
+        @include respond(lg) {
+            width: 75%;
+            margin: 0 auto;
+        }
     }
 
     &__form {
         position: absolute;
         bottom: 7.5px;
+        @include respond(lg) {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            bottom: 0;
+        }
+        
 
         &--text {
             width: 33rem;
@@ -65,7 +97,12 @@
             line-height: 2.6rem;
             color: $color-text-light;
             padding-left: 2rem;
-
+            @include respond(lg) {
+                padding-left: 1rem;
+                height: 4rem;
+                font-size: 1.4rem;
+                width: 100%;
+            }
         }
 
         &--date {
@@ -77,6 +114,13 @@
             line-height: 2.6rem;
             color: $color-text-light;
             padding-left: 2rem;
+            @include respond(lg) {
+                height: 4rem;
+                padding-left: 1rem;
+                font-size: 1.4rem;
+                width: 100%;
+
+            }
         }
     }
 }

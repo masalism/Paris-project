@@ -1,0 +1,39 @@
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include respond(lg) {
+        flex-direction: column;
+    }
+    
+    &--right {
+        
+    }
+ 
+    
+    &__item {
+        font-size: 1.6rem;
+        color: $color-text;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all .2s;
+        &:not(:last-child) {
+            margin-right: 3rem;
+        }
+        
+        &:hover {
+            color: $color-primary;
+        }
+
+        &--active {
+            color: $color-primary;
+        }
+    }
+
+    &__bottom {
+        margin-top: 4.5rem;
+        display: flex;
+        justify-content: flex-end;
+
+    }
+}

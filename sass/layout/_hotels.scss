@@ -1,0 +1,18 @@
+.hotels {
+    margin-top: 8rem;
+    @include respond(lg) {
+        margin-top: 4rem;
+    }
+    
+    &__cards {
+        margin-top: 7rem;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @include respond(xl) {
+            margin-top: 4rem;
+            align-items: center;
+            justify-content: space-around;
+        }
+    }
+}

@@ -1,37 +1,24 @@
 .flights {
     margin-top: 11rem;
-    &__top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        
-        &--right {
-            display: flex;
-            justify-content: space-between;
-            width: 37rem;
-        }
+    @include respond(lg) {
+        margin-top: 5rem;
     }
-    
-    &__item {
-        font-size: 1.6rem;
-        color: $color-text;
-
-        &--active {
-            color: $color-primary;
-        }
-    }
-
     &__main {
         display: flex;
         justify-content: space-between;
         margin-top: 6.5rem;
         padding-bottom: 4rem;
         border-bottom: 1px solid $color-text-light-2;
-
+        @include respond(lg) {
+            margin-top: 5rem;
+        }
         &--center {
             display: flex;
             justify-content: space-between;
             width: 52%;
+            @include respond(sm) {
+                width: 45%;
+            }
         }
     }
 
@@ -46,6 +33,9 @@
             display: flex;
             justify-content: space-between;
             width: 57%;
+            @include respond(sm) {
+                width: auto;
+            }
         }
 
         &--left {
@@ -65,11 +55,23 @@
             font-weight: 400;
             color: $color-text;
             margin-bottom: 2rem;
+            @include respond(lg) {
+                font-size: 1.3rem;
+            }
+            @include respond(sm) {
+                font-size: 1rem;
+            }
         }
 
         &--bottom {
             font-size: 1.6rem;
             color: $color-text-light;
+            @include respond(lg) {
+                font-size: 1.3rem;
+            }
+            @include respond(sm) {
+                font-size: 1rem;
+            }
         }
     }
 }
